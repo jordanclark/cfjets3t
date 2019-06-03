@@ -1,0 +1,39 @@
+{
+    "name":"cfjets3t",
+    "slug":"cfjets3t",
+    "version":"0.5.0",
+    "author":"Jordan Clark <jordanclark@gmail.com>",
+    "keywords":[
+        "aws",
+		"s3",
+		"jets3t",
+        "api",
+        "rest"
+    ],
+    "shortDescription":"API client for InternetVideoArchive.com",
+    "type":"modules",
+    "location":"jordanclark/cfjets3t#v0.5.0",
+    "repository":{
+        "URL":"https://github.com/jordanclark/cfjets3t.git",
+        "type":"GIT"
+    },
+    "homepage":"https://github.com/jordanclark/cfjets3t",
+    "bugs":"https://github.com/jordanclark/cfjets3t/issues",
+    "license":[
+        {
+            "type":"Apache-2.0",
+            "URL":"https://github.com/jordanclark/cfjets3t/blob/master/LICENSE"
+        }
+    ],
+    "private":false,
+    "ignore":[
+        "**/.*",
+        "/test/",
+        "/tests/"
+    ],
+    "scripts":{
+        "postVersion":"package set location='jordanclark/cfjets3t#v`package version`'",
+        "onRelease":"publish",
+        "postPublish":"!git push --follow-tags"
+    }
+}
