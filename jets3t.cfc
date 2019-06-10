@@ -59,7 +59,7 @@ component {
 		this.aclObj= createObject( "java", "org.jets3t.service.acl.AccessControlList" ).init();
 		this.utils= createObject( "java", "org.jets3t.service.utils.ServiceUtils" ).init();
 
-		//  method renaming 
+		// method renaming 
 		this.listBuckets= this.getBuckets;
 		this.listObjects= this.getBucket;
 		this.createBucket= this.putBucket;
@@ -88,7 +88,7 @@ component {
 	string function getFileMimeType( required string filePath ) {
 		var contentType= "";
 		if ( !len( arguments.filePath ) ) {
-			//  do nothing 
+			// do nothing 
 		} else if ( structKeyExists( this.mimeTypes, listLast( arguments.filePath, "." ) ) ) {
 			contentType= this.mimeTypes[ listLast( arguments.filePath, "." ) ];
 		} else {
@@ -155,7 +155,7 @@ component {
 			arguments.acl= this.aclObj.REST_CANNED_PUBLIC_READ_WRITE;
 		} else if ( arguments.acl == "auth-read" ) {
 			arguments.acl= this.aclObj.REST_CANNED_AUTHENTICATED_READ;
-		} else { //  private 
+		} else { // private 
 			arguments.acl= this.aclObj.REST_CANNED_PRIVATE;
 		}
 		arguments.location= this.nullif( arguments.location );
@@ -330,7 +330,7 @@ component {
 		this.debugLog( "S3 PUT [#arguments.bucket#][#arguments.key#]= #arguments.file#" );
 		try {
 			if ( left( arguments.file, 3 ) == "RAM" ) {
-				//  read VFS file and pass in as bytes instead 
+				// read VFS file and pass in as bytes instead 
 				var fi= fileReadBinary( arguments.file );
 				obj= createObject( "java", "org.jets3t.service.model.S3Object" ).init( arguments.key, fi );
 			} else {
@@ -364,7 +364,7 @@ component {
 			} else if ( arguments.acl == "auth-read" ) {
 				obj.setAcl( this.aclObj.REST_CANNED_AUTHENTICATED_READ  );
 			} else {
-				//  private 
+				// private 
 				obj.setAcl( this.aclObj.REST_CANNED_PRIVATE );
 			}
 			if ( arguments.maxAge > 0 ) {
@@ -482,7 +482,7 @@ component {
 			} else if ( arguments.acl == "auth-read" ) {
 				obj.setAcl( this.aclObj.REST_CANNED_AUTHENTICATED_READ  );
 			} else {
-				//  private 
+				// private 
 				obj.setAcl( this.aclObj.REST_CANNED_PRIVATE );
 			}
 			if ( arguments.maxAge > 0 ) {
@@ -666,7 +666,7 @@ component {
 			} else if ( arguments.acl == "auth-read" ) {
 				obj.setAcl( this.aclObj.REST_CANNED_AUTHENTICATED_READ  );
 			} else {
-				//  private 
+				// private 
 				obj.setAcl( this.aclObj.REST_CANNED_PRIVATE );
 			}
 			if ( listFindNoCase( "REDUCED_REDUNDANCY,REDUCED,R", arguments.storage ) ) {
