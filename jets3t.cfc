@@ -71,7 +71,7 @@ component {
 		return this;
 	}
 
-	function this.debugLog( required input ) {
+	function debugLog( required input ) {
 		if ( structKeyExists( request, "log" ) && isCustomFunction( request.log ) ) {
 			if ( isSimpleValue( arguments.input ) ) {
 				request.log( "cfJetS3t: " & arguments.input );
