@@ -124,7 +124,7 @@ component {
 			if ( structKeyExists( cfcatch, "getErrorMessage" ) ) {
 				out.errorDetail= cfcatch.getErrorMessage() & " code[" & cfcatch.getResponseCode() & "]";
 			} else {
-				out.errorDetail= cfcatch.message;
+				out.errorDetail = "JSON Error: " & (cfcatch.message?:"No catch message") & " " & (cfcatch.detail?:"No catch detail");
 			}
 			out.exception= cfcatch;
 		} catch (any cfcatch) {
@@ -132,7 +132,7 @@ component {
 			if ( structKeyExists( cfcatch, "errorMessage" ) ) {
 				out.errorDetail= cfcatch.errorMessage;
 			} else {
-				out.errorDetail= cfcatch.message;
+				out.errorDetail = "JSON Error: " & (cfcatch.message?:"No catch message") & " " & (cfcatch.detail?:"No catch detail");
 			}
 			out.exception= cfcatch;
 		}
@@ -168,12 +168,12 @@ component {
 			if ( structKeyExists( cfcatch, "getErrorMessage" ) ) {
 				out.errorDetail= cfcatch.getErrorMessage() & " code[" & cfcatch.getResponseCode() & "]";
 			} else {
-				out.errorDetail= cfcatch.message;
+				out.errorDetail = "JSON Error: " & (cfcatch.message?:"No catch message") & " " & (cfcatch.detail?:"No catch detail");
 			}
 			out.exception= cfcatch;
 		} catch (any cfcatch) {
 			out.success= false;
-			out.errorDetail= cfcatch.message;
+			out.errorDetail = "JSON Error: " & (cfcatch.message?:"No catch message") & " " & (cfcatch.detail?:"No catch detail");
 			out.exception= cfcatch;
 		}
 		return out;
@@ -214,12 +214,12 @@ component {
 			if ( structKeyExists( cfcatch, "getErrorMessage" ) ) {
 				out.errorDetail= cfcatch.getErrorMessage() & " code[" & cfcatch.getResponseCode() & "]";
 			} else {
-				out.errorDetail= cfcatch.message;
+				out.errorDetail = "JSON Error: " & (cfcatch.message?:"No catch message") & " " & (cfcatch.detail?:"No catch detail");
 			}
 			out.exception= cfcatch;
 		} catch (any cfcatch) {
 			out.success= false;
-			out.errorDetail= cfcatch.message;
+			out.errorDetail = "JSON Error: " & (cfcatch.message?:"No catch message") & " " & (cfcatch.detail?:"No catch detail");
 			out.exception= cfcatch;
 		}
 		if ( out.success ) {
@@ -266,12 +266,12 @@ component {
 			if ( structKeyExists( cfcatch, "getErrorMessage" ) ) {
 				out.errorDetail= cfcatch.getErrorMessage() & " code[" & cfcatch.getResponseCode() & "]";
 			} else {
-				out.errorDetail= cfcatch.message;
+				out.errorDetail = "JSON Error: " & (cfcatch.message?:"No catch message") & " " & (cfcatch.detail?:"No catch detail");
 			}
 			out.exception= cfcatch;
 		} catch (any cfcatch) {
 			out.success= false;
-			out.errorDetail= cfcatch.message;
+			out.errorDetail = "JSON Error: " & (cfcatch.message?:"No catch message") & " " & (cfcatch.detail?:"No catch detail");
 			out.exception= cfcatch;
 		}
 		return out;
@@ -294,12 +294,12 @@ component {
 			if ( structKeyExists( cfcatch, "getErrorMessage" ) ) {
 				out.errorDetail= cfcatch.getErrorMessage() & " code[" & cfcatch.getResponseCode() & "]";
 			} else {
-				out.errorDetail= cfcatch.message;
+				out.errorDetail = "JSON Error: " & (cfcatch.message?:"No catch message") & " " & (cfcatch.detail?:"No catch detail");
 			}
 			out.exception= cfcatch;
 		} catch (any cfcatch) {
 			out.success= false;
-			out.errorDetail= cfcatch.message;
+			out.errorDetail = "JSON Error: " & (cfcatch.message?:"No catch message") & " " & (cfcatch.detail?:"No catch detail");
 			out.exception= cfcatch;
 		}
 		return out;
@@ -383,12 +383,12 @@ component {
 			if ( structKeyExists( cfcatch, "getErrorMessage" ) ) {
 				out.errorDetail= cfcatch.getErrorMessage() & " code[" & cfcatch.getResponseCode() & "]";
 			} else {
-				out.errorDetail= cfcatch.message;
+				out.errorDetail = "JSON Error: " & (cfcatch.message?:"No catch message") & " " & (cfcatch.detail?:"No catch detail");
 			}
 			out.exception= cfcatch;
 		} catch (any cfcatch) {
 			out.success= false;
-			out.errorDetail= cfcatch.message;
+			out.errorDetail = "JSON Error: " & (cfcatch.message?:"No catch message") & " " & (cfcatch.detail?:"No catch detail");
 			out.exception= cfcatch;
 		}
 		return out;
@@ -501,12 +501,12 @@ component {
 			if ( structKeyExists( cfcatch, "getErrorMessage" ) ) {
 				out.errorDetail= cfcatch.getErrorMessage() & " code[" & cfcatch.getResponseCode() & "]";
 			} else {
-				out.errorDetail= cfcatch.message;
+				out.errorDetail = "JSON Error: " & (cfcatch.message?:"No catch message") & " " & (cfcatch.detail?:"No catch detail");
 			}
 			out.exception= cfcatch;
 		} catch (any cfcatch) {
 			out.success= false;
-			out.errorDetail= cfcatch.message;
+			out.errorDetail = "JSON Error: " & (cfcatch.message?:"No catch message") & " " & (cfcatch.detail?:"No catch detail");
 			out.exception= cfcatch;
 		}
 		return out;
@@ -531,12 +531,12 @@ component {
 			if ( structKeyExists( cfcatch, "getErrorMessage" ) ) {
 				out.errorDetail= cfcatch.getErrorMessage() & " code[" & cfcatch.getResponseCode() & "]";
 			} else {
-				out.errorDetail= cfcatch.message;
+				out.errorDetail = "JSON Error: " & (cfcatch.message?:"No catch message") & " " & (cfcatch.detail?:"No catch detail");
 			}
 			out.exception= cfcatch;
 		} catch (any cfcatch) {
 			out.success= false;
-			out.errorDetail= cfcatch.message;
+			out.errorDetail = "JSON Error: " & (cfcatch.message?:"No catch message") & " " & (cfcatch.detail?:"No catch detail");
 			out.exception= cfcatch;
 		}
 		return out;
@@ -566,12 +566,12 @@ component {
 			if ( structKeyExists( cfcatch, "getErrorMessage" ) ) {
 				out.errorDetail= cfcatch.getErrorMessage() & " code[" & cfcatch.getResponseCode() & "]";
 			} else {
-				out.errorDetail= cfcatch.message;
+				out.errorDetail = "JSON Error: " & (cfcatch.message?:"No catch message") & " " & (cfcatch.detail?:"No catch detail");
 			}
 			out.exception= cfcatch;
 		} catch (any cfcatch) {
 			out.success= false;
-			out.errorDetail= cfcatch.message;
+			out.errorDetail = "JSON Error: " & (cfcatch.message?:"No catch message") & " " & (cfcatch.detail?:"No catch detail");
 			out.exception= cfcatch;
 		}
 		if ( !out.success && fileExists( arguments.file ) ) {
@@ -599,12 +599,12 @@ component {
 			if ( structKeyExists( cfcatch, "getErrorMessage" ) ) {
 				out.errorDetail= cfcatch.getErrorMessage() & " code[" & cfcatch.getResponseCode() & "]";
 			} else {
-				out.errorDetail= cfcatch.message;
+				out.errorDetail = "JSON Error: " & (cfcatch.message?:"No catch message") & " " & (cfcatch.detail?:"No catch detail");
 			}
 			out.exception= cfcatch;
 		} catch (any cfcatch) {
 			out.success= false;
-			out.errorDetail= cfcatch.message;
+			out.errorDetail = "JSON Error: " & (cfcatch.message?:"No catch message") & " " & (cfcatch.detail?:"No catch detail");
 			out.exception= cfcatch;
 		}
 		return out;
@@ -627,12 +627,12 @@ component {
 			if ( structKeyExists( cfcatch, "getErrorMessage" ) ) {
 				out.errorDetail= cfcatch.getErrorMessage() & " code[" & cfcatch.getResponseCode() & "]";
 			} else {
-				out.errorDetail= cfcatch.message;
+				out.errorDetail = "JSON Error: " & (cfcatch.message?:"No catch message") & " " & (cfcatch.detail?:"No catch detail");
 			}
 			out.exception= cfcatch;
 		} catch (any cfcatch) {
 			out.success= false;
-			out.errorDetail= cfcatch.message;
+			out.errorDetail = "JSON Error: " & (cfcatch.message?:"No catch message") & " " & (cfcatch.detail?:"No catch detail");
 			out.exception= cfcatch;
 		}
 		return out;
@@ -684,12 +684,12 @@ component {
 			if ( structKeyExists( cfcatch, "getErrorMessage" ) ) {
 				out.errorDetail= cfcatch.getErrorMessage() & " code[" & cfcatch.getResponseCode() & "]";
 			} else {
-				out.errorDetail= cfcatch.message;
+				out.errorDetail = "JSON Error: " & (cfcatch.message?:"No catch message") & " " & (cfcatch.detail?:"No catch detail");
 			}
 			out.exception= cfcatch;
 		} catch (any cfcatch) {
 			out.success= false;
-			out.errorDetail= cfcatch.message;
+			out.errorDetail = "JSON Error: " & (cfcatch.message?:"No catch message") & " " & (cfcatch.detail?:"No catch detail");
 			out.exception= cfcatch;
 		}
 		return out;
@@ -762,12 +762,12 @@ component {
 			if ( structKeyExists( cfcatch, "getErrorMessage" ) ) {
 				out.errorDetail= cfcatch.getErrorMessage() & " code[" & cfcatch.getResponseCode() & "]";
 			} else {
-				out.errorDetail= cfcatch.message;
+				out.errorDetail = "JSON Error: " & (cfcatch.message?:"No catch message") & " " & (cfcatch.detail?:"No catch detail");
 			}
 			out.exception= cfcatch;
 		} catch (any cfcatch) {
 			out.success= false;
-			out.errorDetail= cfcatch.message;
+			out.errorDetail = "JSON Error: " & (cfcatch.message?:"No catch message") & " " & (cfcatch.detail?:"No catch detail");
 			out.exception= cfcatch;
 		}
 		return out;
@@ -814,12 +814,12 @@ component {
 			if ( structKeyExists( cfcatch, "getErrorMessage" ) ) {
 				out.errorDetail= cfcatch.getErrorMessage() & " code[" & cfcatch.getResponseCode() & "]";
 			} else {
-				out.errorDetail= cfcatch.message;
+				out.errorDetail = "JSON Error: " & (cfcatch.message?:"No catch message") & " " & (cfcatch.detail?:"No catch detail");
 			}
 			out.exception= cfcatch;
 		} catch (any cfcatch) {
 			out.success= false;
-			out.errorDetail= cfcatch.message;
+			out.errorDetail = "JSON Error: " & (cfcatch.message?:"No catch message") & " " & (cfcatch.detail?:"No catch detail");
 			out.exception= cfcatch;
 		}
 		return out;
